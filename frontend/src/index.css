@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blinkist-brand: #20BA68;
+  --font-family-body: 'Inter', system-ui, sans-serif;
+  --font-family-heading: 'Outfit', system-ui, sans-serif;
+}
+
+:root {
+  --bg-primary: #F8F9FA;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.18);
+}
+
+:root.dark {
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+  --text-primary: #F8F9FA;
+  --text-secondary: #94A3B8;
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family-body);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
